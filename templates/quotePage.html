@@ -20,15 +20,6 @@
                 },
             });
         }
-        function path(){
-            var id = {{id}};
-            var lang = {{lang}};
-            var url = '{% url 'tanslateQuote' id=123 lang=456 %}'
-            url.replace('123', id);
-            url.replace('456', lang);
-            consol.log(url);
-            return url;
-        }
     </script>
     <style>
         .bquote {
@@ -78,7 +69,6 @@
     <div>
         <center>
             <button class="btn" onclick="location.href='{% url 'generatequote' %}';">Generate</button>
-            <button class="btn" onclick="location.href=path();">Translate</button>
             <button class=" btn" onclick="download('quote.png')">Download Quote</button>
         </center>
     </div>
